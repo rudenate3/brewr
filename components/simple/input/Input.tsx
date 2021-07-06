@@ -6,8 +6,8 @@ const Input = ({
   value
 }: {
   label?: string
-  onChange: () => {}
-  value: string
+  onChange: (event: any) => Promise<void>
+  value?: string
 }) => {
   return (
     <InputContainer>

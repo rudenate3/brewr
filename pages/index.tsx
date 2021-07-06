@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react'
+import { OptionTypeBase } from 'react-select'
+
+import { IBreweryAttrs } from '../@types/Brewery'
 
 import CardGrid from '@composite/card-grid/CardGrid'
 import Featured from '@simple/featured/Featured'
@@ -14,9 +17,27 @@ const Home = ({
 }: {
   initialBreweries: Array<IBreweryAttrs>
 }) => {
-  const [breweries, setBreweries] = useState([])
+  const [breweries, setBreweries] = useState<Array<IBreweryAttrs>>([])
   const [breweryType, setBreweryType] = useState('')
-  const [featuredBrewery, setFeaturedBrewery] = useState({})
+  const [featuredBrewery, setFeaturedBrewery] = useState<IBreweryAttrs>({
+    id: 0,
+    name: '',
+    brewery_type: '',
+    street: '',
+    address_2: '',
+    address_3: '',
+    city: '',
+    state: '',
+    county_province: '',
+    postal_code: '',
+    country: '',
+    longitude: '',
+    latitude: '',
+    phone: '',
+    website_url: '',
+    updated_at: '',
+    created_at: ''
+  })
 
   useEffect(() => {
     setBreweries(initialBreweries)
@@ -32,8 +53,8 @@ const Home = ({
       .catch((err) => console.error(err))
   }, [breweryType])
 
-  const onChange = (typeObj: { label: string; value: string }) =>
-    setBreweryType(typeObj.value)
+  const onChange = (typeObj: OptionTypeBase | null): void =>
+    setBreweryType(typeObj!.value)
 
   return (
     <div>

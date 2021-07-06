@@ -1,10 +1,11 @@
 import { default as ReactSelect } from 'react-select'
+import { OptionTypeBase } from 'react-select'
 
 const Select = ({
   onChange,
   options
 }: {
-  onChange: (typeObj: null | Object) => {}
+  onChange: (typeObj: null | OptionTypeBase) => void
   options: Array<Object>
 }) => {
   return (

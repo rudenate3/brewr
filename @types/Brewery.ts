@@ -1,4 +1,4 @@
-interface IBreweryAttrs {
+export interface IBreweryAttrs {
   id: number
   name: string
   brewery_type: string
@@ -18,11 +18,11 @@ interface IBreweryAttrs {
   created_at: string
 }
 
-interface IBreweryProps {
+export interface IBreweryProps {
   breweries: Array<IBreweryAttrs>
 }
 
-type IBreweryTypes =
+export type IBreweryTypes =
   | 'micro'
   | 'nano'
   | 'regional'

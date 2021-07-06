@@ -9,10 +9,7 @@ import { axiosClient } from '@utils/axios-client'
 const Search = () => {
   const [breweries, setBreweries] = useState([])
 
-  const onChange = async (event: {
-    preventDefault: () => {}
-    target: { value: string }
-  }) => {
+  const onChange = async (event: any): Promise<void> => {
     event.preventDefault()
 
     const response = await axiosClient.get(

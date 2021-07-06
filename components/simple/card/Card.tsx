@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { IBreweryAttrs } from '../../../@types/Brewery'
+
 import { BREWERY_TYPE_MAP } from '@consts/brewery-types'
 
 import { CardBody, CardContainer, CardHeader } from './Card.styles'

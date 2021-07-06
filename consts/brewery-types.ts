@@ -11,7 +11,7 @@ export const BREWERY_TYPES = [
   { value: 'regional', label: 'Regional' }
 ]
 
-export const BREWERY_TYPE_MAP = {
+export const BREWERY_TYPE_MAP: { [key: string]: string } = {
   bar: 'Bar',
   brewpub: 'Brew Pub',
   closed: 'Closed',

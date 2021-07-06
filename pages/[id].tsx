@@ -1,5 +1,7 @@
 import { FaGlobe, FaPhoneAlt } from 'react-icons/fa'
 
+import { IBreweryAttrs } from '../@types/Brewery'
+
 import { axiosClient } from '@utils/axios-client'
 
 import CardShelf from '@composite/card-shelf/CardShelf'

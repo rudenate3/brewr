@@ -1,5 +1,7 @@
 import { v4 as uuidv4 } from 'uuid'
 
+import { IBreweryAttrs, IBreweryProps } from '../../../@types/Brewery'
+
 import Card from '@simple/card/Card'
 
 import { CardGridContainer } from './CardGrid.styles'
